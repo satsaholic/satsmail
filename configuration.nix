@@ -17,12 +17,18 @@
      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIT7z0zlSGVnGsHKLEcGfgRz0VyPRX4X9UOuorPVdgfR"
   ];
 
+  # open a port in the firewall for the DNS server
+  networking.firewall.allowedTCPPorts = [ 53 ];
+  networking.firewall.allowedUDPPorts = [ 53 ];
+  
+  # setup the dns server to serve the zone file we want
   services.bind = {
     enable = true;
+    ipv4Only = false;
     zones = [
       { name = "satsaholic.duckdns.org"; 
         master = true; 
-        file = "satsaholic.duckdns.org.zone"; 
+        file = "/etc/nixos/satsaholic.duckdns.org.zone"; 
         masters = []; slaves = [];
         extraConfig = "";
       }

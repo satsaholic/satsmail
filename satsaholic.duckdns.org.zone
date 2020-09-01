@@ -1,6 +1,6 @@
 ; satsaholic.duckdns.org
 $TTL 3600
-satsaholic.duckdns.org. IN     SOA    a.root-servers.net. postmaster@satsaholic.duckdns.org. (
+satsaholic.duckdns.org. IN     SOA   ns1.satsaholic.duckdns.org. postmaster@satsaholic.duckdns.org. (
 				2020082901  ; Serial
 				1H          ; refresh after 3 hours
 				1H          ; retry after 1 hour
@@ -21,6 +21,6 @@ mail			IN A	95.217.19.38
 ns1			IN A	95.217.19.38
 ns2			IN A	95.217.19.38
 ; Resource Record - veryfy the IP where your mails come from(disable if not needed)
-; @	IN TXT		"v=spf1 ip4:95.217.19.38/24 -all"
+@	IN TXT		"v=spf1 ip4:95.217.19.38/24 -all"
 
 ; EOF
