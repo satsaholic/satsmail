@@ -38,6 +38,8 @@
 
         "anothersatsaholic@satsaholic.duckdns.org" = {
            hashedPassword = "$6$AI5W0k30tinN.J$/X8euz4Ht8gYC0k7rJcl3yPGPhqikdnC78B4pgdtc/DQWQ5SvV9lZBBh/AXsJ.WBg8Lgg5tHCrlXn9qYCztEJ.";
+           aliases = [];
+           catchAll = [];
         };
        # "user2@example.com" = { ... };
     };
