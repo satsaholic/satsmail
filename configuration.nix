@@ -31,6 +31,12 @@
         file = "/etc/nixos/satsaholic.duckdns.org.zone"; 
         masters = []; slaves = [];
         extraConfig = "";
+      } 
+      { name = "19.217.95.in-addr.arpa"; 
+        master = true; 
+        file = "/etc/nixos/reverse.satsaholic.duckdns.org.zone"; 
+        masters = []; slaves = [];
+        extraConfig = "";
       }
     ];
   };
