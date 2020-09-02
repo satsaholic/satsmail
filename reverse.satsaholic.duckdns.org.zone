@@ -1,6 +1,6 @@
 ; reverse zone for satsaholic.duckdns.org
 $TTL 3600
-19.217.95.in-addr.arpa IN     SOA   ns1.satsaholic.duckdns.org. postmaster@satsaholic.duckdns.org. (
+@	IN     SOA   ns1.satsaholic.duckdns.org. postmaster@satsaholic.duckdns.org. (
 				2020082902  ; Serial
 				1H          ; refresh after 3 hours
 				1H          ; retry after 1 hour
