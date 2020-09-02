@@ -1,7 +1,7 @@
 ; satsaholic.duckdns.org
 $TTL 3600
 satsaholic.duckdns.org. IN     SOA   ns1.satsaholic.duckdns.org. postmaster@satsaholic.duckdns.org. (
-				2020082901  ; Serial
+				2020082902  ; Serial
 				1H          ; refresh after 3 hours
 				1H          ; retry after 1 hour
 				1W          ; expire after 1 week
@@ -20,7 +20,15 @@ mx1			IN A	95.217.19.38
 mail			IN A	95.217.19.38
 ns1			IN A	95.217.19.38
 ns2			IN A	95.217.19.38
+
 ; Resource Record - veryfy the IP where your mails come from(disable if not needed)
 @	IN TXT		"v=spf1 ip4:95.217.19.38/24 -all"
+
+; DKIM Record
+mx1._domainkey	IN	TXT	( "v=DKIM1; k=rsa; "
+	  "p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQD28PtUXGCd//gJTyFxmlR6Tu4SmgYnr8m46N2AIJZ7i81z0+2EpRjdx4bXUlZNlM4V7qHTN8dlRyhBX8VqmSkb3KlgDNJ2Y0TeW+sYRkksfmaOmHchApUDW9lA7x9m0RU5Rrwz0Cy2JYY9sLv1BCEXr2vYcFhlp5ZB1KXBW5J4pwIDAQAB" )  ; ----- DKIM key mail for satsaholic.duckdns.org
+
+; DMARC Record
+_dmarc.satsaholic.duckdns.org	IN	TXT	"v=DMARC1; p=none"
 
 ; EOF
