@@ -40,4 +40,10 @@
       }
     ];
   };
+
+  # enable nginx for a rented subdomain
+  services.nginx.enable = true;
+  services.nginx.virtualHosts."simplythebest.lnpay.xyz" = {
+      root = "/var/www/simplythebest.lnpay.xyz";
+  };
 }
